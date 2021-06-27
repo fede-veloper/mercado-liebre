@@ -21,12 +21,15 @@ header form {
 
 main {
     background-color: #ebebeb;
+    margin: 10px;
+    border: solid 2px rgb(43, 90, 188);
 } 
 
 footer {
     padding: 20px;
     margin: 10px;
     background-color: white;
+    border: solid 2px rgb(43, 90, 188);
 }
 
 footer i {
@@ -65,34 +68,45 @@ article {
     margin: 15px;
 }
 
-#logo-barra {
+#cabecera {
     display: flex;
     justify-content: space-around;
+    border: 1px solid black;
+    flex-wrap: wrap;
 }
 
-#info-header {
+#logo, #barra-busqueda, #texto-cabecera{
+    width: 30%;
     margin: 10px;
-    text-align: center;
-    align-self: center;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#logo {
+#barra-busqueda i {
     margin: 10px;
+    font-size: 1.5em;
+}
+
+#barra-busqueda input {
     width: 50%;
+    padding: 8px;
 }
 
-#barra {
+#barra-busqueda input:focus {
+    width: 50%;
+    padding: 8px;
+    border: solid 2px rgb(43, 90, 188);
+}
+
+#texto-cabecera i {
     margin: 10px;
-    width: 45%;
-    align-self: center;
-}
-
-#barra form {
-    text-align: center;
-    display: inline;
 }
 
 #menus {
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -119,7 +133,8 @@ article {
 }
 
 #burger-menu {
-    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
 }       
 
@@ -141,6 +156,59 @@ article {
 #ultima-vista, #ofertas {
     display: flex;
     flex-wrap: wrap;
+}
+
+#botones-register {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    width: 37.5%;
+}
+
+#botones-register button {
+    width: 75px;
+    padding: 5px 5px;
+    color: white;
+    background-color: rgb(50, 124, 242);
+    border-radius: 10px;
+    font-size: 17.5px;
+}
+
+#botones-register button:hover {
+    background-color: rgb(40, 97, 187);
+    color: black;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+#perfil-register {
+    display: flex;
+    justify-content: space-around;
+    width: 37.5%;
+}
+
+#form-singup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#singup-button button {
+    width: 100%;
+    padding: 5px 5px;
+    color: white;
+    background-color: rgb(50, 124, 242);
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 17.5px;
+}
+
+#singup-button button:hover {
+    background-color: rgb(40, 97, 187);
+    color: black;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
 }
 
 .precio {
@@ -192,29 +260,104 @@ article {
     position: absolute;
 }
 
-.form-register .titulo {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 15px;
+.form-register {
+    padding: 30px 25px;
 }
 
-.form-register label {
+.singup-input, #singup-button {
+    width: 50%;
+}
+
+.singup-input input {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 25px;
+}
+
+.titulo {
+    font-size: 17.5px;
+    margin-bottom: 10px;
+    width: 50%;
+    font-weight: bolder;
+}
+
+.form-control {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.form-control input {
+    width: 75%;
+    padding: 5px;
+}
+
+.form-control label {
+    width: 100%;
     display: block;
 }
+
+.form-control-check label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.descripcion-producto .descripciones {
+    display: none;
+} 
 
 @media (max-width: 768px) {
     header nav {
         display: none;
     }
-    .descripcion-producto .descripciones {
-        display: none;
-    } 
+
+    .form-control input {
+        width: 100%;
+    }
+
+    .titulo {
+        font-weight: bolder;
+        font-size: 12px;
+    }
+
+    #logo, #barra-busqueda {
+        width: 42%;
+    }
+
+    #barra-busqueda input {
+        width: 60%;
+        padding: 4px;
+    }
+
+    #texto-cabecera {
+        width: 100%;
+    }
+
+    #botones-register, #perfil-register {
+        width: 50%;
+    }
+
+    #botones-register button {
+        padding: 3px 1px;
+        font-size: 12.5px;
+    }
 }
 
 @media (min-width: 768px) {
     article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 45%;
+    }
+
+    article:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    article:hover .descripcion-producto .descripciones {
+        display: block;
+    }
+
+    article:hover .descripcion-producto i {
+        animation: camion 1s 1;
     }
 
     #ultima-vista, #ofertas {
@@ -223,18 +366,24 @@ article {
 
     #burger-menu {
         display: none;
-    }
-
-    #cabecera {
-        display: flex;
-        justify-content: center;
     }
 }
 
 @media (min-width: 1366px) {
     article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 22%;
+    }
+
+    article:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    article:hover .descripcion-producto .descripciones {
+        display: block;
+    }
+
+    article:hover .descripcion-producto i {
+        animation: camion 1s 1;
     }
 
     #ultima-vista, #ofertas {
@@ -243,5 +392,20 @@ article {
 
     #burger-menu {
         display: none;
+    }
+
+    #footer-desktop {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@keyframes camion {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
     }
 }

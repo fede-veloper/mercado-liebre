@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <title>Registro</title>
+    <title> Mercado Liebre </title>
 </head>
 <body>
     <header>
@@ -47,76 +47,19 @@
         </div>
     </header>
     <main>
-        <form action="" method="POST" class="form-register">
-            <div class="form-control">
-                <input type="text" name="nombre-apellido" placeholder="Nombre y apellido">
+        <div id="form-singup">
+            <div class="singup-input">
+                <input type="text" name="usuario" placeholder="Usuario">
             </div>
-            <div class="form-control">
-                <input type="text" name="nombre-usuario" placeholder="Nombre de usuario">
+            <div class="singup-input">
+                <input type="password" name="password" placeholder="Passsword">
             </div>
-            <div class="form-control">
-                <input type="email" name="e-mail" placeholder="E-mail">
-            </div>
-            <div class="form-control">
-                <label class="titulo">Fecha de nacimiento</label>
-                <input type="date" name="fecha-nacimiento">
-            </div>
-            <div class="form-control">
-                <input type="text" name="domicilio" placeholder="Domicilio">
-            </div>
-            <div class="form-control-check">
-                <label class="titulo">Perfil de usuario</label>
-                <div id="perfil-register">
-                    <label>
-                        <input type="radio" name="perfil-usuario" value="Comprador">
-                        Comprador
-                    </label>
-                    <label>
-                        <input type="radio" name="perfil-usuario" value="Vendedor">
-                        Vendedor
-                    </label>
-                </div>
-            </div>
-            <div class="form-control-check">
-                <label class="titulo">Intereses</label>
-                <label>
-                    <input type="checkbox" name="intereses" value="Electro">
-                    Electro
-                </label>
-                <label>
-                    <input type="checkbox" name="intereses" value="Moda">
-                    Moda
-                </label>
-                <label>
-                    <input type="checkbox" name="intereses" value="Hogar">
-                    Hogar
-                </label>
-                <label>
-                    <input type="checkbox" name="intereses" value="Jugueteria">
-                    Jugueteria
-                </label>
-                <label>
-                    <input type="checkbox" name="intereses" value="Vida sana">
-                    Vida sana
-                </label>
-            </div>
-            <div class="form-control">
-                <label class="titulo">Foto de usuario (.jpg)</label>
-                <input type="file" name="foto" accept=".jpg">
-            </div>
-            <div class="form-control">
-                <input type="password" name="password-usuario" placeholder="Contraseña">
-            </div>
-            <div class="form-control">
-                <input type="password" name="password-usuario" placeholder="Confirmar contraseña">
-            </div>
-            <div id="botones-register">
+            <div id="singup-button">
                 <button type="submit" class="button-form">enviar</button>
-                <button type="reset" class="button-form">borrar</button>
             </div>
-        </form>
+        </div>
     </main>
-    <footer>
+    <footer id="singup-footer">
         <div id="footer-desktop">
             <section>
                 <div><i class="fas fa-credit-card"></i></div>
