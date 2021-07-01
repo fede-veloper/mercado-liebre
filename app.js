@@ -23,7 +23,7 @@ app.get('/views/singup.html', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/singup.html'));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT || process.env.PORT, () => {
     console.log('Servidor corriendo en el puerto 3000');
 });
 
