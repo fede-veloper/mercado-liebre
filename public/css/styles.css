@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #EAC926;
+    background-color: rgb(254, 237, 98);
 }
 
 header form {
@@ -22,14 +22,12 @@ header form {
 main {
     background-color: #ebebeb;
     margin: 10px;
-    border: solid 2px rgb(43, 90, 188);
 } 
 
 footer {
     padding: 20px;
     margin: 10px;
     background-color: white;
-    border: solid 2px rgb(43, 90, 188);
 }
 
 footer i {
@@ -71,14 +69,12 @@ article {
 #cabecera {
     display: flex;
     justify-content: space-around;
-    border: 1px solid black;
     flex-wrap: wrap;
 }
 
 #logo, #barra-busqueda, #texto-cabecera{
     width: 30%;
     margin: 10px;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,11 +93,15 @@ article {
 #barra-busqueda input:focus {
     width: 50%;
     padding: 8px;
-    border: solid 2px rgb(43, 90, 188);
 }
 
 #texto-cabecera i {
     margin: 10px;
+    font-size: 1.5em;
+}
+
+#texto-cabecera p {
+    font-size: 1.5em;
 }
 
 #menus {
@@ -110,9 +110,11 @@ article {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-#menu-1 {
+#menu-1, #menu-2 {
     width: 50%;
     text-align: center;
     padding: 10px;
@@ -120,16 +122,16 @@ article {
 
 #menu-1 a {
     padding-left: 20px;
-}
-
-#menu-2 {
-    width: 50%;
-    text-align: center;
-    padding: 10px;
+    color: rgb(172, 162, 77);
 }
 
 #menu-2 a {
     padding-left: 20px;
+    color: rgb(0, 0, 0);
+}
+
+#menu-1 a:hover {
+    color: black;
 }
 
 #burger-menu {
@@ -143,7 +145,6 @@ article {
     padding: 7px;
     color: white;
     background-color: rgb(43, 90, 188);
-    border: solid 2px rgb(43, 90, 188);
     border-radius: 6px;
 }
 
@@ -168,7 +169,7 @@ article {
 #botones-register button {
     width: 75px;
     padding: 5px 5px;
-    color: white;
+    color: rgb(232, 232, 232);
     background-color: rgb(50, 124, 242);
     border-radius: 10px;
     font-size: 17.5px;
@@ -176,7 +177,7 @@ article {
 
 #botones-register button:hover {
     background-color: rgb(40, 97, 187);
-    color: black;
+    color: rgb(255, 255, 255);
     transition-property: background-color, color;
     transition-duration: 0.5s;
 }
@@ -185,6 +186,7 @@ article {
     display: flex;
     justify-content: space-around;
     width: 37.5%;
+    font-size: 1.3em;
 }
 
 #form-singup {
@@ -196,7 +198,7 @@ article {
 #singup-button button {
     width: 100%;
     padding: 5px 5px;
-    color: white;
+    color: rgb(232, 232, 232);
     background-color: rgb(50, 124, 242);
     margin-top: 35px;
     margin-bottom: 20px;
@@ -206,7 +208,7 @@ article {
 
 #singup-button button:hover {
     background-color: rgb(40, 97, 187);
-    color: black;
+    color: rgb(255, 255, 255);
     transition-property: background-color, color;
     transition-duration: 0.5s;
 }
@@ -275,6 +277,10 @@ article {
     margin-top: 25px;
 }
 
+.singup-input input:invalid {
+    background-color: rgb(254, 215, 217);
+}
+
 .titulo {
     font-size: 17.5px;
     margin-bottom: 10px;
@@ -287,9 +293,14 @@ article {
     margin-bottom: 15px;
 }
 
-.form-control input {
+.form-control input, .form-control textarea {
     width: 75%;
     padding: 5px;
+    resize: none;
+}
+
+.form-control input:invalid, .form-control textarea:invalid {
+    background-color: rgb(254, 215, 217);
 }
 
 .form-control label {
@@ -306,13 +317,14 @@ article {
     display: none;
 } 
 
-@media (max-width: 768px) {
+@media (max-width: 870px) {
     header nav {
         display: none;
     }
 
-    .form-control input {
+    .form-control input, .form-control textarea {
         width: 100%;
+        resize: none;
     }
 
     .titulo {
@@ -343,7 +355,7 @@ article {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 870px) {
     article {
         width: 45%;
     }
@@ -358,6 +370,10 @@ article {
 
     article:hover .descripcion-producto i {
         animation: camion 1s 1;
+    }
+
+    #texto-cabecera p {
+        font-size: 1em;
     }
 
     #ultima-vista, #ofertas {
@@ -384,6 +400,10 @@ article {
 
     article:hover .descripcion-producto i {
         animation: camion 1s 1;
+    }
+
+    #texto-cabecera p {
+        font-size: 1.5em;
     }
 
     #ultima-vista, #ofertas {

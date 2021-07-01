@@ -13,11 +13,15 @@
     <header>
         <div id="cabecera">
             <div id="logo">
-                <img src="/img/logo-mercado-liebre.svg"/>
+                <a href="index.html">
+                    <img src="/img/logo-mercado-liebre.svg"/>
+                </a>
             </div>
             <div id="barra-busqueda">
                 <input type="text" placeholder="Buscar productos, marcas"> 
-                <i class="fas fa-search"></i>   
+                <a href="#">
+                    <i class="fas fa-search"></i>   
+                </a>
             </div>
             <div id="texto-cabecera">
                 <i class="fas fa-hand-holding-usd"></i>
@@ -49,26 +53,26 @@
     <main>
         <form action="" method="POST" class="form-register">
             <div class="form-control">
-                <input type="text" name="nombre-apellido" placeholder="Nombre y apellido">
+                <input type="text" name="nombre-apellido" placeholder="Nombre y apellido" minlength="8">
             </div>
             <div class="form-control">
-                <input type="text" name="nombre-usuario" placeholder="Nombre de usuario">
+                <input type="text" name="nombre-usuario" placeholder="Nombre de usuario" minlength="3">
             </div>
             <div class="form-control">
-                <input type="email" name="e-mail" placeholder="E-mail">
+                <input type="email" name="e-mail" placeholder="E-mail" minlength="10">
             </div>
             <div class="form-control">
                 <label class="titulo">Fecha de nacimiento</label>
-                <input type="date" name="fecha-nacimiento">
+                <input type="date" name="fecha-nacimiento" value="2000-01-01" min="1921-01-01" max="2005-01-01">
             </div>
             <div class="form-control">
-                <input type="text" name="domicilio" placeholder="Domicilio">
+                <textarea type="text" name="domicilio" rows="4" placeholder="Domicilio" minlength="10"></textarea>
             </div>
             <div class="form-control-check">
                 <label class="titulo">Perfil de usuario</label>
                 <div id="perfil-register">
                     <label>
-                        <input type="radio" name="perfil-usuario" value="Comprador">
+                        <input type="radio" name="perfil-usuario" value="Comprador" checked>
                         Comprador
                     </label>
                     <label>
@@ -105,10 +109,10 @@
                 <input type="file" name="foto" accept=".jpg">
             </div>
             <div class="form-control">
-                <input type="password" name="password-usuario" placeholder="Contraseña">
+                <input type="password" name="password-usuario" placeholder="Contraseña" minlength="8">
             </div>
             <div class="form-control">
-                <input type="password" name="password-usuario" placeholder="Confirmar contraseña">
+                <input type="password" name="password-usuario" placeholder="Confirmar contraseña" minlength="8">
             </div>
             <div id="botones-register">
                 <button type="submit" class="button-form">enviar</button>
