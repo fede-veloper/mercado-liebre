@@ -3,7 +3,6 @@ const path = require('path');
 
 const app = express();
 const publicPath = path.resolve(__dirname, './public');
-const PORT = 3000;
 
 app.use(express.static(publicPath));
 
@@ -23,7 +22,7 @@ app.get('/views/singup.html', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/singup.html'));
 });
 
-app.listen(PORT || process.env.PORT, () => {
+app.listen(3000 || process.env.PORT, () => {
     console.log('Servidor corriendo en el puerto 3000');
 });
 
