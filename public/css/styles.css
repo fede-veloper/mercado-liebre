@@ -375,6 +375,10 @@ main h2 {
         font-size: 1.2em;
     }
 
+    .form-control-register input, .form-control-register textarea {
+        width: 97%;
+    }
+
     #perfil-register {
         font-size: 1em;
     }
