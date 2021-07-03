@@ -366,7 +366,7 @@ main h2 {
     }
 
     #button-register button, #button-login button {
-        padding: 2px 1px;
+        padding: 4px 2px;
         font-size: 1.2em;
         width: 75px;
     }
