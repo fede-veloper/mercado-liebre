@@ -28,6 +28,7 @@ footer {
     padding: 20px;
     margin: 10px;
     background-color: white;
+    border-radius: 5px;
 }
 
 footer i {
@@ -159,36 +160,6 @@ article {
     flex-wrap: wrap;
 }
 
-#botones-register {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    width: 37.5%;
-}
-
-#botones-register button {
-    width: 75px;
-    padding: 5px 5px;
-    color: rgb(232, 232, 232);
-    background-color: rgb(50, 124, 242);
-    border-radius: 10px;
-    font-size: 17.5px;
-}
-
-#botones-register button:hover {
-    background-color: rgb(40, 97, 187);
-    color: rgb(255, 255, 255);
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
-}
-
-#perfil-register {
-    display: flex;
-    justify-content: space-around;
-    width: 37.5%;
-    font-size: 1.3em;
-}
-
 #form-singup {
     display: flex;
     flex-direction: column;
@@ -262,9 +233,87 @@ article {
     position: absolute;
 }
 
-.form-register {
-    padding: 30px 25px;
+/* form-register */
+#main-register {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
 }
+
+main h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#form-container-register {
+    width: 35%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+#perfil-register {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+#button-register {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#button-register button {
+    width: 75px;
+    padding: 5px 5px;
+    color: rgb(232, 232, 232);
+    background-color: rgb(50, 124, 242);
+    border-radius: 10px;
+    font-size: 17.5px;
+}
+
+#button-register button:hover {
+    background-color: rgb(40, 97, 187);
+    color: rgb(255, 255, 255);
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+.title-register {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.form-register {
+    padding: 30px;
+}
+
+.form-control-register {
+    margin-bottom: 15px;
+}
+
+.form-control-register label {
+    display: block;
+}
+
+.form-control-register input, .form-control-register textarea {
+    width: 95%;
+    padding: 5px;
+    resize: none;
+}
+
+.form-control-register input:invalid, .form-control-register textarea:invalid {
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.form-control-check-register label {
+    display: block;
+    margin-bottom: 15px;
+}
+/* form-register */
 
 .singup-input, #singup-button {
     width: 50%;
@@ -278,58 +327,21 @@ article {
 }
 
 .singup-input input:invalid {
-    background-color: rgb(254, 215, 217);
-}
-
-.titulo {
-    font-size: 17.5px;
-    margin-bottom: 10px;
-    width: 50%;
-    font-weight: bolder;
-}
-
-.form-control {
-    width: 50%;
-    margin-bottom: 15px;
-}
-
-.form-control input, .form-control textarea {
-    width: 75%;
-    padding: 5px;
-    resize: none;
-}
-
-.form-control input:invalid, .form-control textarea:invalid {
-    background-color: rgb(254, 215, 217);
-}
-
-.form-control label {
-    width: 100%;
-    display: block;
-}
-
-.form-control-check label {
-    display: block;
-    margin-bottom: 15px;
+    border: 3px solid rgb(255, 0, 0);
 }
 
 .descripcion-producto .descripciones {
     display: none;
 } 
 
-@media (max-width: 870px) {
+@media (max-width: 942px) {
     header nav {
         display: none;
     }
 
-    .form-control input, .form-control textarea {
+    .form-control-register input, .form-control-register textarea {
         width: 100%;
         resize: none;
-    }
-
-    .titulo {
-        font-weight: bolder;
-        font-size: 12px;
     }
 
     #logo, #barra-busqueda {
@@ -342,20 +354,44 @@ article {
     }
 
     #texto-cabecera {
+        font-size: 0.9em;
         width: 100%;
     }
 
-    #botones-register, #perfil-register {
-        width: 50%;
+    /* form-register */
+    #main-register {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5px;
     }
 
-    #botones-register button {
-        padding: 3px 1px;
-        font-size: 12.5px;
+    main h2 {
+        font-size: 1.75em;
+        font-weight: bold;
+        text-align: center;
     }
+
+    .title-register {
+        font-size: 1.2em;
+    }
+
+    #perfil-register {
+        font-size: 1em;
+    }
+
+    #form-container-register {
+        width: 100%;
+    }
+
+    #button-register button {
+        padding: 2px 1px;
+        font-size: 1.2em;
+        width: 75px;
+    }
+    /* form-register */
 }
 
-@media (min-width: 870px) {
+@media (min-width: 942px) {
     article {
         width: 45%;
     }
@@ -373,7 +409,7 @@ article {
     }
 
     #texto-cabecera p {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     #ultima-vista, #ofertas {

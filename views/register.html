@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <title>Registro</title>
+    <title>Registro en Mercado Liebre</title>
 </head>
 <body>
     <header>
@@ -51,74 +51,79 @@
         </div>
     </header>
     <main>
-        <form action="" method="POST" class="form-register">
-            <div class="form-control">
-                <input type="text" name="nombre-apellido" placeholder="Nombre y apellido" minlength="8">
+        <h2>Completa tus datos</h2>
+        <div id="main-register">
+            <div id="form-container-register">
+                <form action="" method="POST" class="form-register">
+                    <div class="form-control-register">
+                        <input type="text" name="nombre-apellido" placeholder="Nombre y apellido" minlength="8">
+                    </div>
+                    <div class="form-control-register">
+                        <input type="text" name="nombre-usuario" placeholder="Nombre de usuario" minlength="3">
+                    </div>
+                    <div class="form-control-register">
+                        <input type="email" name="e-mail" placeholder="E-mail" minlength="10">
+                    </div>
+                    <div class="form-control-register">
+                        <label class="title-register">Fecha de nacimiento</label>
+                        <input type="date" name="fecha-nacimiento" value="2000-01-01" min="1921-01-01" max="2005-01-01">
+                    </div>
+                    <div class="form-control-register">
+                        <textarea type="text" name="domicilio" rows="4" placeholder="Domicilio" minlength="10"></textarea>
+                    </div>
+                    <div class="form-control-check">
+                        <label class="title-register">Perfil de usuario</label>
+                        <div id="perfil-register">
+                            <label>
+                                <input type="radio" name="perfil-usuario" value="Comprador" checked>
+                                Comprador
+                            </label>
+                            <label>
+                                <input type="radio" name="perfil-usuario" value="Vendedor">
+                                Vendedor
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-control-check-register">
+                        <label class="title-register">Intereses</label>
+                        <label>
+                            <input type="checkbox" name="intereses" value="Electro">
+                            Electro
+                        </label>
+                        <label>
+                            <input type="checkbox" name="intereses" value="Moda">
+                            Moda
+                        </label>
+                        <label>
+                            <input type="checkbox" name="intereses" value="Hogar">
+                            Hogar
+                        </label>
+                        <label>
+                            <input type="checkbox" name="intereses" value="Jugueteria">
+                            Jugueteria
+                        </label>
+                        <label>
+                            <input type="checkbox" name="intereses" value="Vida sana">
+                            Vida sana
+                        </label>
+                    </div>
+                    <div class="form-control-register">
+                        <label class="title-register">Foto de usuario (.jpg)</label>
+                        <input type="file" name="foto" accept=".jpg">
+                    </div>
+                    <div class="form-control-register">
+                        <input type="password" name="password-usuario" placeholder="Contraseña" minlength="8">
+                    </div>
+                    <div class="form-control-register">
+                        <input type="password" name="password-usuario" placeholder="Confirmar contraseña" minlength="8">
+                    </div>
+                    <div id="button-register">
+                        <button type="submit">enviar</button>
+                        <button type="reset">borrar</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-control">
-                <input type="text" name="nombre-usuario" placeholder="Nombre de usuario" minlength="3">
-            </div>
-            <div class="form-control">
-                <input type="email" name="e-mail" placeholder="E-mail" minlength="10">
-            </div>
-            <div class="form-control">
-                <label class="titulo">Fecha de nacimiento</label>
-                <input type="date" name="fecha-nacimiento" value="2000-01-01" min="1921-01-01" max="2005-01-01">
-            </div>
-            <div class="form-control">
-                <textarea type="text" name="domicilio" rows="4" placeholder="Domicilio" minlength="10"></textarea>
-            </div>
-            <div class="form-control-check">
-                <label class="titulo">Perfil de usuario</label>
-                <div id="perfil-register">
-                    <label>
-                        <input type="radio" name="perfil-usuario" value="Comprador" checked>
-                        Comprador
-                    </label>
-                    <label>
-                        <input type="radio" name="perfil-usuario" value="Vendedor">
-                        Vendedor
-                    </label>
-                </div>
-            </div>
-            <div class="form-control-check">
-                <label class="titulo">Intereses</label>
-                <label>
-                    <input type="checkbox" name="intereses" value="Electro">
-                    Electro
-                </label>
-                <label>
-                    <input type="checkbox" name="intereses" value="Moda">
-                    Moda
-                </label>
-                <label>
-                    <input type="checkbox" name="intereses" value="Hogar">
-                    Hogar
-                </label>
-                <label>
-                    <input type="checkbox" name="intereses" value="Jugueteria">
-                    Jugueteria
-                </label>
-                <label>
-                    <input type="checkbox" name="intereses" value="Vida sana">
-                    Vida sana
-                </label>
-            </div>
-            <div class="form-control">
-                <label class="titulo">Foto de usuario (.jpg)</label>
-                <input type="file" name="foto" accept=".jpg">
-            </div>
-            <div class="form-control">
-                <input type="password" name="password-usuario" placeholder="Contraseña" minlength="8">
-            </div>
-            <div class="form-control">
-                <input type="password" name="password-usuario" placeholder="Confirmar contraseña" minlength="8">
-            </div>
-            <div id="botones-register">
-                <button type="submit" class="button-form">enviar</button>
-                <button type="reset" class="button-form">borrar</button>
-            </div>
-        </form>
+        </div>
     </main>
     <footer>
         <div id="footer-desktop">
