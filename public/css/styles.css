@@ -166,24 +166,6 @@ article {
     align-items: center;
 }
 
-#singup-button button {
-    width: 100%;
-    padding: 5px 5px;
-    color: rgb(232, 232, 232);
-    background-color: rgb(50, 124, 242);
-    margin-top: 35px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    font-size: 17.5px;
-}
-
-#singup-button button:hover {
-    background-color: rgb(40, 97, 187);
-    color: rgb(255, 255, 255);
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
-}
-
 .precio {
     font-size: 18px;
     margin-bottom: 0px;
@@ -233,8 +215,19 @@ article {
     position: absolute;
 }
 
-/* form-register */
-#main-register {
+.descripcion-producto .descripciones {
+    display: none;
+} 
+
+#footer-login {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+/* form-register/form-login */
+#main-register, #main-login {
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
@@ -246,13 +239,17 @@ main h2 {
     text-align: center;
 }
 
-#form-container-register {
+#form-register, #form-login {
+    padding: 30px;
+}
+
+#form-container-register, #form-container-login {
     width: 35%;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
 }
 
-#perfil-register {
+#profile-radiobox-register {
     display: flex;
     justify-content: space-around;
     font-size: 1.3em;
@@ -265,7 +262,11 @@ main h2 {
     padding: 10px;
 }
 
-#button-register button {
+#button-login {
+    text-align: center;
+}
+
+#button-register button, #button-login button {
     width: 75px;
     padding: 5px 5px;
     color: rgb(232, 232, 232);
@@ -274,7 +275,7 @@ main h2 {
     font-size: 17.5px;
 }
 
-#button-register button:hover {
+#button-register button:hover, #button-login button:hover {
     background-color: rgb(40, 97, 187);
     color: rgb(255, 255, 255);
     transition-property: background-color, color;
@@ -287,11 +288,7 @@ main h2 {
     font-weight: bolder;
 }
 
-.form-register {
-    padding: 30px;
-}
-
-.form-control-register {
+.form-control-register, .form-control-login {
     margin-bottom: 15px;
 }
 
@@ -299,13 +296,13 @@ main h2 {
     display: block;
 }
 
-.form-control-register input, .form-control-register textarea {
+.form-control-register input, .form-control-register textarea, .form-control-login input {
     width: 95%;
     padding: 5px;
     resize: none;
 }
 
-.form-control-register input:invalid, .form-control-register textarea:invalid {
+.form-control-register input:invalid, .form-control-register textarea:invalid, .form-control-login input:invalid {
     border: 3px solid rgb(255, 0, 0);
 }
 
@@ -313,26 +310,7 @@ main h2 {
     display: block;
     margin-bottom: 15px;
 }
-/* form-register */
-
-.singup-input, #singup-button {
-    width: 50%;
-}
-
-.singup-input input {
-    width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin-top: 25px;
-}
-
-.singup-input input:invalid {
-    border: 3px solid rgb(255, 0, 0);
-}
-
-.descripcion-producto .descripciones {
-    display: none;
-} 
+/* form-register/form-login */
 
 @media (max-width: 942px) {
     header nav {
@@ -358,7 +336,7 @@ main h2 {
         width: 100%;
     }
 
-    /* form-register */
+    /* form-register/form-login */
     #main-register {
         display: flex;
         justify-content: center;
@@ -375,24 +353,24 @@ main h2 {
         font-size: 1.2em;
     }
 
-    .form-control-register input, .form-control-register textarea {
+    .form-control-register input, .form-control-register textarea, .form-control-login input {
         width: 97%;
     }
 
-    #perfil-register {
+    #profile-radiobox-register {
         font-size: 1em;
     }
 
-    #form-container-register {
+    #form-container-register, #form-container-login {
         width: 100%;
     }
 
-    #button-register button {
+    #button-register button, #button-login button {
         padding: 2px 1px;
         font-size: 1.2em;
         width: 75px;
     }
-    /* form-register */
+    /* form-register/form-login */
 }
 
 @media (min-width: 942px) {

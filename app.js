@@ -18,8 +18,8 @@ app.get('/views/register.html', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/register.html'));
 });
 
-app.get('/views/singup.html', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/singup.html'));
+app.get('/views/login.html', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/login.html'));
 });
 
 app.listen(process.env.PORT || 3000, () => {

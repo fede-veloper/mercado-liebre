@@ -39,7 +39,7 @@
                 <div id="menu-2">
                     <a href="/views/register.html"> Creá tu cuenta </a>
                     <i class="far fa-id-card"></i>
-                    <a href="/views/singup.html"> Ingresá </a>
+                    <a href="/views/login.html"> Ingresá </a>
                     <i class="fas fa-sign-in-alt"></i>
                     <a href="#"> Mis compras </a>
                     <i class="fas fa-shopping-basket"></i>
@@ -54,7 +54,7 @@
         <h2>Completa tus datos</h2>
         <div id="main-register">
             <div id="form-container-register">
-                <form action="" method="POST" class="form-register">
+                <form action="" method="POST" id="form-register">
                     <div class="form-control-register">
                         <input type="text" name="nombre-apellido" placeholder="Nombre y apellido" minlength="8">
                     </div>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="form-control-check">
                         <label class="title-register">Perfil de usuario</label>
-                        <div id="perfil-register">
+                        <div id="profile-radiobox-register">
                             <label>
                                 <input type="radio" name="perfil-usuario" value="Comprador" checked>
                                 Comprador

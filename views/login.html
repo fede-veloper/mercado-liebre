@@ -39,7 +39,7 @@
                 <div id="menu-2">
                     <a href="/views/register.html"> Creá tu cuenta </a>
                     <i class="far fa-id-card"></i>
-                    <a href="/views/singup.html"> Ingresá </a>
+                    <a href="/views/login.html"> Ingresá </a>
                     <i class="fas fa-sign-in-alt"></i>
                     <a href="#"> Mis compras </a>
                     <i class="fas fa-shopping-basket"></i>
@@ -51,19 +51,24 @@
         </div>
     </header>
     <main>
-        <div id="form-singup">
-            <div class="singup-input">
-                <input type="text" name="usuario" placeholder="Usuario" minlength="3">
-            </div>
-            <div class="singup-input">
-                <input type="password" name="password" placeholder="Passsword" minlength="8">
-            </div>
-            <div id="singup-button">
-                <button type="submit" class="button-form">enviar</button>
+        <h2>Inicia sesión</h2>
+        <div id="main-login">
+            <div id="form-container-login">
+                <form action="" method="POST" id="form-login">
+                    <div class="form-control-login">
+                        <input type="text" name="usuario" placeholder="Usuario" minlength="3">
+                    </div>
+                    <div class="form-control-login">
+                        <input type="password" name="password" placeholder="Passsword" minlength="8">
+                    </div>
+                    <div id="button-login">
+                        <button type="submit" class="button-form">enviar</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <footer id="singup-footer">
+    <footer id="footer-login">
         <div id="footer-desktop">
             <section>
                 <div><i class="fas fa-credit-card"></i></div>
