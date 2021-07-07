@@ -82,7 +82,8 @@ article {
 }
 
 #barra-busqueda i {
-    margin: 10px;
+    position: relative;
+    left: -25px;
     font-size: 1.5em;
 }
 
@@ -371,6 +372,10 @@ main h2 {
         width: 75px;
     }
     /* form-register/form-login */
+
+    #footer-login {
+        position: static;
+    }
 }
 
 @media (min-width: 942px) {
